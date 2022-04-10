@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+ 
+ <html>
+<head>
+         <meta charset="UTF-8" />
+         <title>casa de cambio</title>
+         <script>
+             function convertir(){
+                 var valore=parseInt(document.getElementById("valor").value);
+                 var resultado=0;
+                 var dolar=3.71;
+                 var euro=4.04;
+                 if(document.getElementById("uno").checked){
+                     resultado=valore /dolar;
+                     alert("El cambio de soles a Dolares es:"+ resultado);
+
+
+                 }
+                 else if(document.getElementById("dos").checked){
+                     resultado=valore/euro;
+                     alert("el cambio de soles a euros es:"+resultado)
+
+                 }
+                 else{
+                     alert("Complete todo")
+                 }
+
+             }
+
+            
+   
+         </script>
+</head>
+<body>
+        <h1>CASA DE CAMBIO</h1>
+        <form class="formulario">
+            <p>seleccionar moneda a enviar:</p>
+
+            <input type="radio" name="cambio" id="uno" >dolar
+            <input type="radio" name="cambio" id="dos" >euro<br/>
+            <p>ingrese monto</p>
+            <input type="number" id="valor" min="1" max="100000">
+            <button type="button" onclick="convertir()">cotizar</button>
+        
+
+
+            
+    </form>
+     </body>
+ </html>
+ <style>
+body{
+     text-align: center;
+     font-family: monospace;
+     }
+     
+ </style>
+
